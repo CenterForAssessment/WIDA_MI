@@ -27,7 +27,6 @@ SGPstateData[["WIDA_MI"]][["Achievement"]][["Knots_Boundaries"]][["READING.2013_
 
 WIDA_MI_SGP <- abcSGP(
 		WIDA_MI_Data_LONG,
-		years="2011_2012",
 		steps=c("prepareSGP", "analyzeSGP", "combineSGP", "outputSGP"),
 		sgp.percentiles=TRUE,
 		sgp.projections=TRUE,
