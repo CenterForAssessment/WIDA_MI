@@ -25,7 +25,7 @@ WIDA_MI_SGP <- updateSGP(
 		sgp.projections=FALSE,
 		sgp.projections.lagged=FALSE,
 		sgp.percentiles.baseline=FALSE,
-		sgp.projections.baseline=FALSE,
+		sgp.projections.baseline=TRUE,
 		sgp.projections.lagged.baseline=FALSE)
 
 

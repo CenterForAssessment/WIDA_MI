@@ -9,7 +9,6 @@
 require(SGP)
 options(error=recover)
 options(warn=2)
-#debug(studentGrowthProjections)
 
 
 ### Load Data
@@ -20,8 +19,8 @@ load("Data/WIDA_MI_Data_LONG.Rdata")
 ### NULL out SGPstateData
 
 SGPstateData[["WIDA_MI"]][["Assessment_Program_Information"]][["Scale_Change"]] <- NULL
-SGPstateData[["WIDA_MI"]][["Achievement"]][["Cutscores"]][["READING.2013_2014"]] <- NULL
-SGPstateData[["WIDA_MI"]][["Achievement"]][["Knots_Boundaries"]][["READING.2013_2014"]] <- NULL
+SGPstateData[["WIDA_MI"]][["Achievement"]][["Cutscores"]][["READING.2014"]] <- NULL
+SGPstateData[["WIDA_MI"]][["Achievement"]][["Knots_Boundaries"]][["READING.2014"]] <- NULL
 
 ### Run analyses
 
