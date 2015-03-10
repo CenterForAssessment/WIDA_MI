@@ -12,14 +12,14 @@ require(SGP)
 ### Load Data
 
 load("Data/WIDA_MI_SGP.Rdata")
-load("Data/WIDA_MI_Data_LONG_2013_2014.Rdata")
+load("Data/WIDA_MI_Data_LONG_2014.Rdata")
 
 
 ### Run analyses
 
 WIDA_MI_SGP <- updateSGP(
 		WIDA_MI_SGP,
-		WIDA_MI_Data_LONG_2013_2014,
+		WIDA_MI_Data_LONG_2014,
 		steps=c("prepareSGP", "analyzeSGP", "combineSGP", "outputSGP"),
 		sgp.percentiles=TRUE,
 		sgp.projections=FALSE,
