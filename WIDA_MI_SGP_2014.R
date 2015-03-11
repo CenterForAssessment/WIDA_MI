@@ -37,14 +37,15 @@ SGPstateData[["WIDA_MI"]][["Growth"]][["System_Type"]] <- "Baseline Referenced"
 WIDA_MI_SGP <- updateSGP(
 		WIDA_MI_SGP,
 		WIDA_MI_Data_LONG_2014,
-		steps=c("prepareSGP", "analyzeSGP", "combineSGP", "outputSGP"),
+		steps=c("prepareSGP", "analyzeSGP", "combineSGP", "outputSGP", "visualizeSGP"),
 		sgp.percentiles=TRUE,
 		sgp.projections=FALSE,
 		sgp.projections.lagged=FALSE,
 		sgp.percentiles.baseline=FALSE,
 		sgp.projections.baseline=TRUE,
 		sgp.projections.lagged.baseline=FALSE,
-		sgp.config=READING_2014.config)
+		sgp.config=READING_2014.config,
+		plot.types="growthAchievementPlot")
 
 
 ### Save results
