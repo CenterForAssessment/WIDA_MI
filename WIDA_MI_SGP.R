@@ -1,6 +1,6 @@
 ##########################################################################################
 ###
-### Script for calculating SGPs for 2010-2011, 2011-2012, 2012-2013 for WIDA/ACCESS/MI
+### Script for calculating SGPs for 2010-2011, 2011-2012, 2012-2013 for MI-ELPA
 ###
 ##########################################################################################
 
@@ -16,11 +16,12 @@ options(warn=2)
 load("Data/WIDA_MI_Data_LONG.Rdata")
 
 
-### NULL out SGPstateData
+### NULL out SGPstateData stuff associated with 2014 data and assessment transition (hasn't happened yet when these analyses would have originally happened)
 
 SGPstateData[["WIDA_MI"]][["Assessment_Program_Information"]][["Scale_Change"]] <- NULL
 SGPstateData[["WIDA_MI"]][["Achievement"]][["Cutscores"]][["READING.2014"]] <- NULL
 SGPstateData[["WIDA_MI"]][["Achievement"]][["Knots_Boundaries"]][["READING.2014"]] <- NULL
+SGPstateData[["WIDA_MI"]][["Assessment_Program_Information"]][["Assessment_Transition"]] <- NULL
 
 ### Run analyses
 
