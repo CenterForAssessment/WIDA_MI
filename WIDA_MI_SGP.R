@@ -26,17 +26,19 @@ SGPstateData[["WIDA_MI"]][["Achievement"]][["Knots_Boundaries"]][["READING.2014"
 
 WIDA_MI_SGP <- abcSGP(
 		WIDA_MI_Data_LONG,
-		steps=c("prepareSGP", "analyzeSGP", "combineSGP", "outputSGP"),
+		steps=c("prepareSGP", "analyzeSGP", "combineSGP", "visualizeSGP", "outputSGP"),
 		sgp.percentiles=TRUE,
 		sgp.projections=TRUE,
 		sgp.projections.lagged=TRUE,
 		sgp.percentiles.baseline=FALSE,
 		sgp.projections.baseline=FALSE,
 		sgp.projections.lagged.baseline=FALSE,
-		save.intermediate.results=TRUE)#,
-#		parallel.config=list(BACKEND="PARALLEL", WORKERS=list(PERCENTILES=4, PROJECTIONS=4, LAGGED_PROJECTIONS=4, SGP_SCALE_SCORE_TARGETS=4)))
+		save.intermediate.results=TRUE,
+		plot.types=c("growthAchievementPlot", "studentGrowthPlot"),
+		sgPlot.demo.report=TRUE,
+		parallel.config=list(BACKEND="PARALLEL", WORKERS=list(PERCENTILES=4, PROJECTIONS=4, LAGGED_PROJECTIONS=4, SGP_SCALE_SCORE_TARGETS=4)))
 
 
 ### Save results
 
-save(WIDA_MI_SGP, file="Data/WIDA_MI_SGP.Rdata")
+#save(WIDA_MI_SGP, file="Data/WIDA_MI_SGP.Rdata")

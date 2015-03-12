@@ -7,7 +7,6 @@
 ### Load packages
 
 require(data.table)
-require(SGP)
 
 
 ### Load data
@@ -30,7 +29,7 @@ WIDA_MI_Data_LONG[,SCALE_SCORE:=as.numeric(SCALE_SCORE)]
 WIDA_MI_Data_LONG[,GRADE:=as.character(as.numeric(GRADE))]
 WIDA_MI_Data_LONG[,ACHIEVEMENT_LEVEL:=paste("L", ACHIEVEMENT_LEVEL, sep="")]
 WIDA_MI_Data_LONG[ACHIEVEMENT_LEVEL=="L", ACHIEVEMENT_LEVEL:="NO SCORE"]
-WIDA_MI_Data_LONG[,ACHIEVEMENT_LEVEL:=factor(ACHIEVEMENT_LEVEL, ordered=TRUE)]
+WIDA_MI_Data_LONG[,ACHIEVEMENT_LEVEL:=as.character(ACHIEVEMENT_LEVEL)]
 
 ### Create two data sets
 
