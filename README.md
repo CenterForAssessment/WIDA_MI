@@ -1,4 +1,4 @@
 WIDA_MI
 =======
 
-Scripts for running ACCESS (WIDA) growth for Michigan (MDE)
+Scripts for running ELPA & WIDA SGP analyses for Michigan (MDE)
