@@ -11,7 +11,7 @@ require(data.table)
 
 ### Load data
 
-WIDA_MI_Data_LONG <- as.data.table(read.delim("/Users/damian/Documents/Github/WIDA_MI/Data/Base_Files/ELPAtoWIDA2.txt", sep="|", colClasses=rep("character", 8)))
+WIDA_MI_Data_LONG <- as.data.table(read.delim("Data/Base_Files/ELPAtoWIDA2.txt", sep="|", colClasses=rep("character", 8)))
 
 
 ### Tidy up data
@@ -27,8 +27,9 @@ WIDA_MI_Data_LONG[YEAR=="2012-2013",YEAR:="2013"]
 WIDA_MI_Data_LONG[YEAR=="2013-2014",YEAR:="2014"]
 WIDA_MI_Data_LONG[,SCALE_SCORE:=as.numeric(SCALE_SCORE)]
 WIDA_MI_Data_LONG[,GRADE:=as.character(as.numeric(GRADE))]
-WIDA_MI_Data_LONG[,ACHIEVEMENT_LEVEL:=paste("Level", ACHIEVEMENT_LEVEL)]
-WIDA_MI_Data_LONG[ACHIEVEMENT_LEVEL=="Level ", ACHIEVEMENT_LEVEL:="NO SCORE"]
+WIDA_MI_Data_LONG[YEAR!=2014, ACHIEVEMENT_LEVEL:=paste("MI-ELPA Level", ACHIEVEMENT_LEVEL)]
+WIDA_MI_Data_LONG[YEAR==2014, ACHIEVEMENT_LEVEL:=paste("WIDA Level", ACHIEVEMENT_LEVEL)]
+WIDA_MI_Data_LONG[ACHIEVEMENT_LEVEL=="MI-ELPA Level " | ACHIEVEMENT_LEVEL=="WIDA Level ", ACHIEVEMENT_LEVEL:="NO SCORE"]
 WIDA_MI_Data_LONG[,ACHIEVEMENT_LEVEL:=as.character(ACHIEVEMENT_LEVEL)]
 
 ### Create two data sets
