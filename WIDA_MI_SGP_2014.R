@@ -26,11 +26,6 @@ READING_2014.config <- list(
                 sgp.grade.sequences=list(c('0', '1'), c('0', '1', '2'), c('1', '2', '3'), c('2', '3', '4'), c('3', '4', '5'), c('4', '5', '6'), c('5', '6', '7'), c('6', '7', '8'), c('7', '8', '9'), c('8', '9', '10'), c('9', '10', '11'), c('10', '11', '12')),
                 sgp.projection.grade.sequences=list('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11')))
 
-### Modify SGPstateData
-
-SGPstateData[["WIDA_MI"]][["Assessment_Program_Information"]][["Scale_Change"]] <- NULL
-SGPstateData[["WIDA_MI"]][["Growth"]][["System_Type"]] <- "Baseline Referenced"
-
 
 ### Run analyses
 
