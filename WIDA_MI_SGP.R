@@ -27,12 +27,12 @@ SGPstateData[["WIDA_MI"]][["Achievement"]][["Levels"]] <- list(
         Labels=c("MI-ELPA Level 1", "MI-ELPA Level 2", "MI-ELPA Level 3", "MI-ELPA Level 4", "MI-ELPA Level 5", "NO SCORE"),
         Proficient=c("Not Proficient","Not Proficient","Not Proficient","Proficient","Proficient",NA))
 SGPstateData[["WIDA_MI"]][["Student_Report_Information"]][["Achievement_Level_Labels"]] <- list(
-	"MI-ELPA Level 1"="MI-ELPA L1",
-	"MI-ELPA Level 2"="MI-ELPA L2",
-	"MI-ELPA Level 3"="MI-ELPA L3",
-	"MI-ELPA Level 4"="MI-ELPA L4",
-	"MI-ELPA Level 5"="MI-ELPA L5")
-SGPstateData[["WIDA_MI"]][["SGP_Configuration"]][["sgPlot.fan.condition"]] <- "head(Achievement_Levels, 1) %in% paste('Level', 1:3)"
+	"MI-ELPA L1"="MI-ELPA Level 1",
+	"MI-ELPA L2"="MI-ELPA Level 2",
+	"MI-ELPA L3"="MI-ELPA Level 3",
+	"MI-ELPA L4"="MI-ELPA Level 4",
+	"MI-ELPA L5"="MI-ELPA Level 5")
+SGPstateData[["WIDA_MI"]][["SGP_Configuration"]][["sgPlot.fan.condition"]] <- "head(Achievement_Levels, 1) %in% paste('MI-ELPA Level', 1:3)"
 
 
 ### Run analyses

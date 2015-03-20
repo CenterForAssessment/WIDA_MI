@@ -7,7 +7,6 @@
 ### Load SGP package
 
 require(SGP)
-debug(analyzeSGP)
 
 
 ### Load Data
