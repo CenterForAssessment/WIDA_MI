@@ -40,7 +40,8 @@ WIDA_MI_SGP <- updateSGP(
 		sgp.projections.baseline=TRUE,
 		sgp.projections.lagged.baseline=FALSE,
 		sgp.config=READING_2014.config,
-		plot.types="growthAchievementPlot")
+		plot.types=c("studentGrowthPlot", "growthAchievementPlot"),
+		parallel.config=list(BACKEND="PARALLEL", WORKERS=list(PERCENTILES=4, PROJECTIONS=4, LAGGED_PROJECTIONS=4, SGP_SCALE_SCORE_TARGETS=4, GA_PLOTS=1, SG_PLOTS=1)))
 
 
 ### Save results
