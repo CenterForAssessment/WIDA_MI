@@ -47,7 +47,6 @@ WIDA_MI_SGP <- abcSGP(
 		sgp.percentiles.baseline=FALSE,
 		sgp.projections.baseline=FALSE,
 		sgp.projections.lagged.baseline=FALSE,
-		save.intermediate.results=TRUE,
 		sgp.target.scale.scores=TRUE,
 		plot.types=c("growthAchievementPlot", "studentGrowthPlot"),
 		sgPlot.demo.report=TRUE,
