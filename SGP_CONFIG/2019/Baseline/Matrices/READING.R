@@ -11,13 +11,13 @@ READING_BASELINE.config <- list(
     sgp.baseline.grade.sequences=c('0', '1'),
     sgp.baseline.grade.sequences.lags=1),
   list(
-    sgp.baseline.content.areas=rep('READING', 3),
-    sgp.baseline.panel.years=c('2017', '2018', '2019'),
+    sgp.baseline.content.areas=rep('READING', 2),
+    sgp.baseline.panel.years=c('2017', '2018'), ### NOTE using 2017 and 2018 data to align with two prior analysis in next configuration.
     sgp.baseline.grade.sequences=c('1', '2'),
     sgp.baseline.grade.sequences.lags=1),
   list(
     sgp.baseline.content.areas=rep('READING', 3),
-    sgp.baseline.panel.years=c('2017', '2018', '2019'),
+    sgp.baseline.panel.years=c('2016', '2017', '2018'), ### NOTE using 2016, 2017 and 2018 data due to missing Grade 0 data in 2017
     sgp.baseline.grade.sequences=c('0', '1', '2'),
     sgp.baseline.grade.sequences.lags=c(1,1)),
   list(
@@ -124,7 +124,7 @@ READING_BASELINE.config <- list(
   ###  SKIP YEAR
   list(
     sgp.baseline.content.areas=rep('READING', 2),
-    sgp.baseline.panel.years=c('2017', '2019'),
+    sgp.baseline.panel.years=c('2016', '2018'), ### NOTE: Using 2016 and 2018 due to missing Grade 0 data in 2017.
     sgp.baseline.grade.sequences=c('0', '2'),
     sgp.baseline.grade.sequences.lags=2),
   list(
