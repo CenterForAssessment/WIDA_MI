@@ -1,6 +1,6 @@
 #################################################################################
 ###                                                                           ###
-###   WIDA_MI Learning Loss Analyses -- 2020 Baseline Growth Percentiles      ###
+###   WIDA_MI Learning Loss Analyses -- 2021 Baseline Growth Percentiles      ###
 ###                                                                           ###
 #################################################################################
 
@@ -10,18 +10,18 @@ require(data.table)
 
 ###   Load data
 load("Data/WIDA_MI_SGP.Rdata")
-load("Data/WIDA_MI_Data_LONG_2020.Rdata")
+load("Data/WIDA_MI_Data_LONG_2021.Rdata")
 
 ###   Add baseline matrices to SGPstateData
-SGPstateData <- SGPmatrices::addBaselineMatrices("WIDA_MI", "2020")
+SGPstateData <- SGPmatrices::addBaselineMatrices("WIDA_MI", "2021")
 
 ### Parameters
-parallel.config <- list(BACKEND="PARALLEL", WORKERS=list(PERCENTILES=12, BASELINE_PERCENTILES=12, PROJECTIONS=12, LAGGED_PROJECTIONS=12, SGP_SCALE_SCORE_TARGETS=12))
+parallel.config <- list(BACKEND="PARALLEL", WORKERS=list(PERCENTILES=6, BASELINE_PERCENTILES=6, PROJECTIONS=6, LAGGED_PROJECTIONS=6, SGP_SCALE_SCORE_TARGETS=6))
 
 ###   Read in BASELINE percentiles configuration scripts and combine
-source("SGP_CONFIG/2020/READING.R")
+source("SGP_CONFIG/2021/READING.R")
 
-WIDA_MI_2020_Baseline_Config <- READING.2020.config
+WIDA_MI_2021_Baseline_Config <- READING.2021.config
 
 
 #####
@@ -31,9 +31,9 @@ WIDA_MI_2020_Baseline_Config <- READING.2020.config
 
 WIDA_MI_SGP <- updateSGP(
         what_sgp_object = WIDA_MI_SGP,
-        with_sgp_data_LONG = WIDA_MI_Data_LONG_2020,
+        with_sgp_data_LONG = WIDA_MI_Data_LONG_2021,
         steps = c("prepareSGP", "analyzeSGP", "combineSGP", "outputSGP"),
-        sgp.config = WIDA_MI_2020_Baseline_Config,
+        sgp.config = WIDA_MI_2021_Baseline_Config,
         sgp.percentiles = TRUE,
         sgp.projections = TRUE,
         sgp.projections.lagged = TRUE,
