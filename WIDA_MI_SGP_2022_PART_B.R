@@ -31,6 +31,8 @@ SGPstateData[["WIDA_MI"]][["SGP_Configuration"]][["content_area.projection.seque
 SGPstateData[["WIDA_MI"]][["SGP_Configuration"]][["max.forward.projection.sequence"]] <- list(
     READING=7)
 
+SGPstateData[["WIDA_MI"]][["SGP_Configuration"]][["sgp.target.scale.scores.merge"]] <- NULL ## Merge targets in next step
+
 ###   Run analysis
 WIDA_MI_SGP <- abcSGP(
         WIDA_MI_SGP,
@@ -48,4 +50,4 @@ WIDA_MI_SGP <- abcSGP(
 )
 
 ###   Save results
-#save(WIDA_MI_SGP, file="Data/Michigan_SGP.Rdata")
+save(WIDA_MI_SGP, file="Data/WIDA_MI_SGP.Rdata")
